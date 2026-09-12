@@ -1,0 +1,107 @@
+* {
+    font-family: "Noto Sans Mono", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+/* Keep the bar itself invisible */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: transparent;
+}
+
+/* Minimal spacing */
+#workspaces {
+    margin: 0 4px;
+}
+
+#window {
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    padding: 0 8px;
+}
+
+/* Workspaces */
+#workspaces button {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    color: white;
+    background: transparent;
+    box-shadow: none;
+}
+
+#workspaces button:hover {
+    color: white;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* System information */
+#pulseaudio,
+#cpu,
+#temperature,
+#battery,
+#clock,
+#tray {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0 7px;
+}
+
+/* Status */
+#pulseaudio.muted {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+#temperature.critical {
+    color: #ff6b6b;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #8be28b;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff6b6b;
+}
+
+/* Tray */
+#tray {
+    padding: 0 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Remove hover backgrounds */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#temperature:hover,
+#pulseaudio:hover,
+#tray:hover {
+    background: transparent;
+}
+
